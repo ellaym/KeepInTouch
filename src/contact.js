@@ -1,7 +1,7 @@
 class Contact{
-    constructor(name, phone_numbers, message_list, timeout) {
+    constructor(name, phone_number, message_list, timeout) {
         this.name = name;
-        this.phone_numbers = phone_numbers;
+        this.phoneNumber = phone_number;
         this.message_list = message_list;
         this.timeout = timeout
     }
