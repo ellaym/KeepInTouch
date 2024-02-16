@@ -13,7 +13,7 @@ client.on("qr", (qr) => {
 
 client.on("ready", () => {
   console.log("Client is ready!");
-  setInterval(checkInactivity, ONE_DAY_IN_MS);
+  setInterval(checkInactivity, 1000 * 5);
 });
 
 async function checkInactivity() {
@@ -48,7 +48,7 @@ function load_contacts() {
       Timeout timeout
       FROM Contacts`;
 
-    load_db("resources/data.db", sql)
+    load_db("db/db_files/data.db", sql)
       .then((db_contacts) => {
         const found_contacts = db_contacts.map(
           (contact) =>
