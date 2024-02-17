@@ -16,7 +16,6 @@ c.execute('''
 
 # Insert a row of data
 c.execute("INSERT INTO Contacts VALUES ('972527034091','Itamar B','הא יא תחת; מה אומר יא נוד?',0)")
-c.execute("INSERT INTO Contacts VALUES ('972556601543','Josef S','Hello;How are you?',0)")
 
 
 # Save (commit) the changes
