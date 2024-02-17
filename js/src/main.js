@@ -40,7 +40,7 @@ async function checkInactivity() {
   await Promise.all(tasks);
 }
 
-function load_contacts() {
+async function load_contacts() {
   return new Promise((resolve, reject) => {
     const sql = `SELECT PhoneNumber phoneNumber,
       Name name,
