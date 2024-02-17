@@ -13,7 +13,7 @@ client.on("qr", (qr) => {
 
 client.on("ready", () => {
   console.log("Client is ready!");
-  setInterval(checkInactivity, 1000 * 5);
+  setInterval(checkInactivity, ONE_DAY_IN_MS);
 });
 
 async function checkInactivity() {
