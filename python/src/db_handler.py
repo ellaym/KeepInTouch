@@ -18,6 +18,11 @@ class DatabaseHandler:
         self.cursor.execute(sql, (record_id,))
         return self.cursor.fetchone()
 
+    def get_all_records(self, table_name):
+        sql = f"SELECT * FROM {table_name};"
+        self.cursor.execute(sql)
+        return self.cursor.fetchall()
+
     def edit_record(self, table_name, record_id, id_column="id", **kwargs):
         columns = ", ".join(f"{k} = ?" for k in kwargs.keys())
         sql = f"UPDATE {table_name} SET {columns} WHERE {id_column} = ?"
